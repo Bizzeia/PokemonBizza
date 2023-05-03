@@ -1,3 +1,4 @@
+
 import mysql.connector
 import pandas as pd
 
@@ -9,11 +10,11 @@ mydb = mysql.connector.connect(
 )
 mycursor = mydb.cursor()
 
-
+mycursor.execute ("drop table if exists Felicità.data ")
 #Create the table for the csv data (if not exists)
 mycursor.execute("""
   CREATE TABLE IF NOT EXISTS Felicità.data (
-    Overall_rank FLOAT,
+    Overall_rank INT,
     Country_or_region VARCHAR(30) NOT NULL,
     Score FLOAT,
     GDP_per_capita FLOAT,
