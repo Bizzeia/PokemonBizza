@@ -15,13 +15,13 @@ mycursor = mydb.cursor()
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/test')
 def hello():
     return render_template('hello.html', name='Fabio')
 
 
 
-@app.route('/paesi')
+@app.route('/')
 
 def unitList():
   #Esegui una Query per estrarre tutti i dati sulle unità dal DB. NB! Prima devi connetterti al DB
