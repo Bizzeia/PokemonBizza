@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
   <title>Felicità Paesi</title>
+  <link rel="stylesheet" href="../static/css/bommo.css" />
 </head>
-<body>
 
-  <img src="../static/images/1.jpg" alt="bommoooooo" width="400">
-  {% for item in units %}
+<body class="cursore-rusci">
 
-  <p>
-    Overall rank: {{ item[0] }}
-  </p>
+  <div class="grid">
 
-  <p>
-    Country or region: {{ item[1] }}
-  </p>
 
-      <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
-  {% endfor %}
+    <!-- <img src="../static/images/1.jpg" alt="bommoooooo" width="400"> -->
+    {% for item in paesi %}
+    <div class="paese">
+    <p>
+      Overall rank: {{ item[0] }}
+    </p>
 
+    <p>
+      Country or region: {{ item[1] }}
+    </p>
+
+    <a href="/paesi/{{ item[1] }}">
+      
+        {{ item[1] }}
+      
+    </a>
+
+    <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
+  </div>
+    {% endfor %}
+  </div>
 
 </body>
-</html>
 
+</html>

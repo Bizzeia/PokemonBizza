@@ -28,3 +28,6 @@ def unitList():
   mycursor.execute("SELECT * FROM data") 
   myresult = mycursor.fetchall()
   return render_template('hello.html', paesi=myresult)
+
+
+

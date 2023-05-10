@@ -1,0 +1,24 @@
+    /* !Stile per tutto*/
+    body {font-family: 'Inter', sans-serif; font-size: 16px; cursor: url(../images/cursore-rusci.png), auto;}
+
+    .testo-grande{font-size: 70px; font-weight: 900;}
+    .testo-medio{font-size: 40px;}
+    .testo-normal{font-size: 20px;}
+    .testo-piccolo{font-size: 14px;}
+    
+    
+    p { color: #666; font-weight: 300;}
+    
+    .testo-importante{font-size: 20px; text-transform: uppercase; font-weight: bold;}
+    
+    .pulsante {padding: 18px 28px; background: #316bff; color: #fff; display: inline-block; border-radius: 4px;}
+    h1,h2,h3,h4,h5,h6 {color: #000; padding-bottom: 30px;}
+    
+    .cursor-not-allowed {
+        cursor: not-allowed;
+    }
+
+    .paese {border: 1px solid red; display: flex;}
+
+    .grid{ width: 100%; border: 1px solid red;}
+
