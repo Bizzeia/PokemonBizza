@@ -1,5 +1,5 @@
     /* !Stile per tutto*/
-    body {font-family: 'Inter', sans-serif; font-size: 16px; cursor: url(../images/cursore-rusci.png), auto;}
+    body {font-family: 'Inter', sans-serif; font-size: 16px; cursor: url(../images/mano\ del\ gaucho.png), auto;}
 
     .testo-grande{font-size: 70px; font-weight: 900;}
     .testo-medio{font-size: 40px;}
@@ -7,7 +7,7 @@
     .testo-piccolo{font-size: 14px;}
     
     
-    p { color: #666; font-weight: 300;}
+    p { color: #000; font-weight: 300; margin: 5px 0px;}
     
     .testo-importante{font-size: 20px; text-transform: uppercase; font-weight: bold;}
     
@@ -18,7 +18,7 @@
         cursor: not-allowed;
     }
 
-    .paese {border: 1px solid red; display: flex;}
+    .paese {border: 1px solid red; display: flex; justify-content: center;}
 
     .grid{ width: 100%; border: 1px solid red;}
 

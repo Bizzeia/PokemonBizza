@@ -7,7 +7,14 @@
 </head>
 
 <body class="cursore-rusci">
-
+  <div class="titolo">
+    <h1>Classifica dell' indice di felicità dei paesi nel mondo</h1>
+  </div>
+  <div class="intro">
+    <p class="testo-normal">
+      L'indice di felicità del pianeta "IFP" è una misura del benessere e dell'efficienza ambientale di una nazione, introdotto dalla New Economics Foundation (NEF) nel luglio 2006. Per misurare l'indice di felicità di una nazione si analizzano alcuni valori, tra i quali il prodotto interno lordo, la qualità dei servizi, la percezione della corruzione e di come si vive nel proprio paese, l'aspettativa di vita
+    </p>
+  </div>
   <div class="grid">
 
 
@@ -15,11 +22,11 @@
     {% for item in paesi %}
     <div class="paese">
     <p>
-      Overall rank: {{ item[0] }}
+     {{ item[0] }}
     </p>
 
     <p>
-      Country or region: {{ item[1] }}
+       {{ item[1] }}
     </p>
 
     <a href="/paesi/{{ item[1] }}">
