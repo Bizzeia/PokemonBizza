@@ -9,7 +9,7 @@
     
     p { color: #000; font-weight: 300; margin: 5px 0px;}
     
-    .testo-importante{font-size: 20px; text-transform: uppercase; font-weight: bold;}
+    .testo-importante{font-size: 20px; font-weight: bold;}
     
     .pulsante {padding: 18px 28px; background: #316bff; color: #fff; display: inline-block; border-radius: 4px;}
     h1,h2,h3,h4,h5,h6 {color: #000; padding-bottom: 30px;}
@@ -18,7 +18,17 @@
         cursor: not-allowed;
     }
 
-    .paese {border: 1px solid red; display: flex; justify-content: center;}
+    .paese {border: 1px solid red; display: inline-block; justify-content: center;}
 
-    .grid{ width: 100%; border: 1px solid red;}
+    .grid{ width: 100%; border: 1px solid red;display: block;}
+
+  
+
+    .bandiera {margin: 10px; border: 1px solid red}
+
+    .row{display: flex;width: 100%; border: 1px solid red; justify-content: center;}
+
+    a{text-decoration: none;}
+
+    
 

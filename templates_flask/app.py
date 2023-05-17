@@ -27,7 +27,13 @@ def unitList():
   #Esegui una Query per estrarre tutti i dati sulle unità dal DB. NB! Prima devi connetterti al DB
   mycursor.execute("SELECT * FROM data") 
   myresult = mycursor.fetchall()
-  return render_template('hello.html', paesi=myresult)
+  return render_template('hello.html', home=myresult)
 
 
 
+#@app.route('/paesi/Finland')
+
+#def unitList():
+#  mycursor.execute("SELECT * FROM data") 
+#  myresult = mycursor.fetchall()
+#  return render_template('hello.html', paesi=myresult)

@@ -4,6 +4,9 @@
 <head>
   <title>Felicità Paesi</title>
   <link rel="stylesheet" href="../static/css/bommo.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body class="cursore-rusci">
@@ -19,26 +22,29 @@
 
 
     <!-- <img src="../static/images/1.jpg" alt="bommoooooo" width="400"> -->
-    {% for item in paesi %}
-    <div class="paese">
-    <p>
-     {{ item[0] }}
-    </p>
+    {% for item in home %}
+    <div class="row">
+        <div class="bandiera">
+        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
+        </div>
+      <div class="paese">
+        <p>{{ item[0] }}</p>
 
-    <p>
-       {{ item[1] }}
-    </p>
 
-    <a href="/paesi/{{ item[1] }}">
+        <a href="/paesi/{{ item[1] }}" class="testo-importante"> {{ item[1] }} </a>
+      </div>
+        
       
-        {{ item[1] }}
       
-    </a>
 
-    <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
+    
+     
+    </div>
+      {% endfor %}
+    
   </div>
-    {% endfor %}
-  </div>
+
+
 
 </body>
 
