@@ -1,4 +1,4 @@
-    /* !Stile per tutto*/
+    /* generico*/
     body {font-family: 'Inter', sans-serif; font-size: 16px; cursor: url(../images/mano\ del\ gaucho.png), auto;}
 
     .testo-grande{font-size: 70px; font-weight: 900;}
@@ -11,7 +11,7 @@
     
     .testo-importante{font-size: 20px; font-weight: bold;}
     
-    .pulsante {padding: 18px 28px; background: #316bff; color: #fff; display: inline-block; border-radius: 4px;margin: 10px; justify-content: right;}
+    .pulsante {padding: 18px 28px; background: #316bff; color: #fff; display: inline-block; border-radius: 4px;margin: 10px; justify-content: right;} /*no*/
     h1,h2,h3,h4,h5,h6 {color: #000; padding-bottom: 30px;}
     
     .cursor-not-allowed {
@@ -32,18 +32,18 @@
 
     
 
-    .row{display: block;}
+    .row{display: block;}     /*uno sopra l'altro*/
 
 
     .stats-div {
-      display: none;
+      display: none;                /*invisibile*/
       
         width: 100%;
         padding: 50px 0;
         text-align: center;
         background-color: lightblue;
         margin-top: 20px;
-        transition: opacity 0.3s ease-in-out; /* Aggiungi una transizione per l'opacità */
+        transition: opacity 0.3s ease-in-out; /* ???*/
     }
     
 
@@ -52,17 +52,21 @@
       height: 10px;
       border-left: 2px solid black;
       border-bottom: 2px solid black;
-      transform: rotate(-45deg); /* Ruota la freccina a 45 gradi */
-      transition: transform 0.3s ease-in-out; /* Aggiungi una transizione animata */
+      transform: rotate(-45deg); /* ruota freccina verso il basso (menu chiuso) */
+      transition: transform 0.3s ease-in-out; /* ???? */
     }
     
-    .row.open .freccina {
-      transform: rotate(-225deg); /* Ruota la freccina a -135 gradi quando il menù è aperto */
+    .row.open .freccina {           /* .open quando js gli mete la classe*/
+      transform: rotate(-225deg); /* Ruota la freccina a -225 gradi quando row ha open(menù  aperto) */
     }
 
     .row.open .stats-div {
       
       
       }
+
+ th, td {
+  border: 1px solid black;
+}
     
 

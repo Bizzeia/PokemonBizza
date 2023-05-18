@@ -23,20 +23,48 @@
 
     
     {% for item in home %}
-  <div class="row" onclick="myFunction('{{ item[1] }}')" id="row-{{ item[1] }}">
+  <div class="row" onclick="myFunction('{{ item[1] }}')" id="row-{{ item[1] }}"> <!--metti id row-nome paese-->   
+    <!--nome del paese nell'argomento della funzione-->  
     <div class="row_sx">
       <div class="bandiera">
-        <img src="../static/images/{{ item[0] }}.jpg" alt="{{ item[0] }}" width="200">
+        <img src="../static/images/{{ item[0] }}.jpg" alt="{{ item[0] }}" width="200"> <!--alt per nome paese in assenza immagine-->
       </div>      <!-- chiusura di BANDIERA -->
       <div class="paese">
-        <p>{{ item[0] }}</p>
+        <p class="testo-medio">{{ item[0] }}</p>  <!--rank nella classifica-->
         <a href="/paesi/{{ item[1] }}" class="testo-importante">{{ item[1] }}</a>
       </div>  <!-- chiusura di PAESE -->
-      <span class="freccina"></span> <!-- Aggiungi la freccina come un elemento span -->
+      <span class="freccina"></span> <!-- freccina  -->
       
     </div>      <!-- chiusura di ROW_SX -->
     <div id="stats-{{ item[1] }}" class="stats-div">
-      This is my DIV element.
+      
+        <table>
+          <tr>
+            <th>Posizione generale</th>
+            <th>Paese o regione</th>
+            <th>Punteggio</th>
+            <th>PIL pro capite</th>
+            <th>Supporto sociale</th>
+            <th>Aspettativa di vita in salute</th>
+            <th>Libertà di fare scelte di vita</th>
+            <th>Generosità</th>
+            <th>Percezioni di corruzione</th>
+          </tr>
+          
+          <tr class="divisore">
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+            <td>{{ item[4] }}</td>
+            <td>{{ item[5] }}</td>
+            <td>{{ item[6] }}</td>
+            <td>{{ item[7] }}</td>
+            <td>{{ item[8] }}</td>
+          </tr>
+        </table>
+      
+      
     </div>  <!-- chiusura di STATS-->
   </div>  <!-- chiusura di ROW-->
 {% endfor %}
@@ -48,17 +76,17 @@
 
 
   <script>
-function myFunction(id) {
-  var x = document.getElementById("stats-" + id);
-  var row = document.getElementById("row-" + id);
-  row.classList.toggle("open");
+function myFunction(id) {                         //funzione dello ziopera
+  var x = document.getElementById("stats-" + id);  //prendi elemento con id stats-item{...}
+  var row = document.getElementById("row-" + id);  //prendi elemento con id row ecc
+  row.classList.toggle("open");                    //aggiungi una classe open al div nascosto
   
-  if (row.classList.contains("open")) {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
+  if (row.classList.contains("open")) {            //"se row-(...) ha una classe open..."
+    x.style.display = "block";                     //..aggiungigli l'attributo display block
+  } else {                                         //altrimenti
+    x.style.display = "none";                      //fallo scomparire 
   }
-}
+} //js entra nel css e cambia attributi
 
     </script>
 
