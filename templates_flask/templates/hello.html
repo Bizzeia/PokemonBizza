@@ -23,16 +23,23 @@
 
     <!-- <img src="../static/images/1.jpg" alt="bommoooooo" width="400"> -->
     {% for item in home %}
-    <div class="row">
-        <div class="bandiera">
-        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
+    <div class="row" onclick="myFunction()">
+      <div class="row_sx">
+          <div class="bandiera">
+          <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
+          </div>
+        <div class="paese">
+          <p>{{ item[0] }}</p>
+
+
+          <a href="/paesi/{{ item[1] }}" class="testo-importante"> {{ item[1] }} </a>
+        
         </div>
-      <div class="paese">
-        <p>{{ item[0] }}</p>
-
-
-        <a href="/paesi/{{ item[1] }}" class="testo-importante"> {{ item[1] }} </a>
-      </div>
+          <div class="pulsante"></div>
+      </div>     
+      <div id="stats">
+        This is my DIV element.
+        </div>
         
       
       
@@ -45,6 +52,18 @@
   </div>
 
 
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("stats");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
 
 </body>
 

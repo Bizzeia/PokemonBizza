@@ -11,14 +11,14 @@
     
     .testo-importante{font-size: 20px; font-weight: bold;}
     
-    .pulsante {padding: 18px 28px; background: #316bff; color: #fff; display: inline-block; border-radius: 4px;}
+    .pulsante {padding: 18px 28px; background: #316bff; color: #fff; display: inline-block; border-radius: 4px;margin: 10px; justify-content: right;}
     h1,h2,h3,h4,h5,h6 {color: #000; padding-bottom: 30px;}
     
     .cursor-not-allowed {
         cursor: not-allowed;
     }
 
-    .paese {border: 1px solid red; display: inline-block; justify-content: center;}
+    .paese {border: 1px solid red; display: inline-block; justify-content: center; }
 
     .grid{ width: 100%; border: 1px solid red;display: block;}
 
@@ -26,9 +26,18 @@
 
     .bandiera {margin: 10px; border: 1px solid red}
 
-    .row{display: flex;width: 100%; border: 1px solid red; justify-content: center;}
+    .row_sx{display: flex;width: 100%; border: 1px solid red; justify-content: center;}
 
     a{text-decoration: none;}
 
-    
+    #stats {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-color: lightblue;
+        margin-top: 20px;
+        display: none;
+      }
+
+    .row{}
 
