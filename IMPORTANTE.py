@@ -1,0 +1,1 @@
+#se ti si bugga flask perchè hai fatto control Z e ti dice [1]+ Stopped scrivi "%1" nel terminale e poi ctrl C per uscire

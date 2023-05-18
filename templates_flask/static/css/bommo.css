@@ -42,8 +42,7 @@
         padding: 50px 0;
         text-align: center;
         background-color: lightblue;
-        margin-top: 20px;
-        transition: opacity 0.3s ease-in-out; /* ???*/
+        transition: opacity 0.3s ease-out; /* ???*/
     }
     
 
