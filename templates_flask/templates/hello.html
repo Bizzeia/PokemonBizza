@@ -21,48 +21,45 @@
   <div class="grid">
 
 
-    <!-- <img src="../static/images/1.jpg" alt="bommoooooo" width="400"> -->
+    
     {% for item in home %}
-    <div class="row" onclick="myFunction()">
-      <div class="row_sx">
-          <div class="bandiera">
-          <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
-          </div>
-        <div class="paese">
-          <p>{{ item[0] }}</p>
-
-
-          <a href="/paesi/{{ item[1] }}" class="testo-importante"> {{ item[1] }} </a>
-        
-        </div>
-          <div class="pulsante"></div>
-      </div>     
-      <div id="stats">
-        This is my DIV element.
-        </div>
-        
+  <div class="row" onclick="myFunction('{{ item[1] }}')" id="row-{{ item[1] }}">
+    <div class="row_sx">
+      <div class="bandiera">
+        <img src="../static/images/{{ item[0] }}.jpg" alt="{{ item[0] }}" width="200">
+      </div>      <!-- chiusura di BANDIERA -->
+      <div class="paese">
+        <p>{{ item[0] }}</p>
+        <a href="/paesi/{{ item[1] }}" class="testo-importante">{{ item[1] }}</a>
+      </div>  <!-- chiusura di PAESE -->
+      <span class="freccina"></span> <!-- Aggiungi la freccina come un elemento span -->
       
-      
+    </div>      <!-- chiusura di ROW_SX -->
+    <div id="stats-{{ item[1] }}" class="stats-div">
+      This is my DIV element.
+    </div>  <!-- chiusura di STATS-->
+  </div>  <!-- chiusura di ROW-->
+{% endfor %}
 
     
-     
-    </div>
-      {% endfor %}
-    
-  </div>
+  
 
 
 
 
   <script>
-    function myFunction() {
-      var x = document.getElementById("stats");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
+function myFunction(id) {
+  var x = document.getElementById("stats-" + id);
+  var row = document.getElementById("row-" + id);
+  row.classList.toggle("open");
+  
+  if (row.classList.contains("open")) {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
     </script>
 
 </body>

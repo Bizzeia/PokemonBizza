@@ -26,18 +26,43 @@
 
     .bandiera {margin: 10px; border: 1px solid red}
 
-    .row_sx{display: flex;width: 100%; border: 1px solid red; justify-content: center;}
+    .row_sx{display: flex;width: 100%; border: 1px solid red; justify-content: center; align-items: center;}
 
     a{text-decoration: none;}
 
-    #stats {
+    
+
+    .row{display: block;}
+
+
+    .stats-div {
+      display: none;
+      
         width: 100%;
         padding: 50px 0;
         text-align: center;
         background-color: lightblue;
         margin-top: 20px;
-        display: none;
-      }
+        transition: opacity 0.3s ease-in-out; /* Aggiungi una transizione per l'opacità */
+    }
+    
 
-    .row{}
+    .freccina {
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid black;
+      border-bottom: 2px solid black;
+      transform: rotate(-45deg); /* Ruota la freccina a 45 gradi */
+      transition: transform 0.3s ease-in-out; /* Aggiungi una transizione animata */
+    }
+    
+    .row.open .freccina {
+      transform: rotate(-225deg); /* Ruota la freccina a -135 gradi quando il menù è aperto */
+    }
+
+    .row.open .stats-div {
+      
+      
+      }
+    
 
