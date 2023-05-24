@@ -15,89 +15,96 @@
   </div>
   <div class="intro">
     <p class="testo-normal">
-      L'indice di felicità del pianeta "IFP" è una misura del benessere e dell'efficienza ambientale di una nazione, introdotto dalla New Economics Foundation (NEF) nel luglio 2006. Per misurare l'indice di felicità di una nazione si analizzano alcuni valori, tra i quali il prodotto interno lordo, la qualità dei servizi, la percezione della corruzione e di come si vive nel proprio paese, l'aspettativa di vita
+      L'indice di felicità del pianeta "IFP" è una misura del benessere e dell'efficienza ambientale di una nazione,
+      introdotto dalla New Economics Foundation (NEF) nel luglio 2006. Per misurare l'indice di felicità di una nazione
+      si analizzano alcuni valori, tra i quali il prodotto interno lordo, la qualità dei servizi, la percezione della
+      corruzione e di come si vive nel proprio paese, l'aspettativa di vita
     </p>
-        <p>Di seguito il mio (wide)alberogenealogico</p>
-    <img src="../static/images/miopadre.jpg" alt="stominchie" width="800" height="198"/>
-        <p class="testo-normal">Di seguito la classifica dei paesi che hanno il gay </p>
+
+    <!-- <p>Di seguito il mio (wide)alberogenealogico</p> <img src="../static/images/miopadre.jpg" alt="stominchie" width="800" height="198"/> -->
+    <p class="testo-normal">Di seguito la classifica delle nazioni a partire dalla più felice</p>
 
   </div>
   <div class="grid">
 
 
-    
+
     {% for item in home %}
-  <div class="row" onclick="myFunction('{{ item[1] }}')" id="row-{{ item[1] }}"> <!--metti id row-nome paese-->   
-    <!--nome del paese nell'argomento della funzione-->  
-    <div class="row_sx">
-      <div class="bandiera">
-        <img src="../static/images/{{ item[0] }}.jpg" alt="{{ item[0] }}" width="200"> <!--alt per nome paese in assenza immagine-->
-      </div>      <!-- chiusura di BANDIERA -->
-      <div class="paese">
-        <p class="testo-medio"><b>{{ item[0] }}</b></p>  <!--rank nella classifica-->
-        <a href="/paesi/{{ item[1] }}" class="testo-importante">{{ item[1] }}</a>
-      </div>  <!-- chiusura di PAESE -->
-      <span class="freccina"></span> <!-- freccina  -->
-      
-    </div>      <!-- chiusura di ROW_SX -->
-    <div id="stats-{{ item[1] }}" class="stats-div">
-      
-        <table>
-          <tr>
-            <th>Posizione generale</th>
-            <th>Paese o regione</th>
-            <th>Punteggio</th>
-            <th>PIL pro capite</th>
-            <th>Supporto sociale</th>
-            <th>Aspettativa di vita in salute</th>
-            <th>Libertà di fare scelte di vita</th>
-            <th>Generosità</th>
-            <th>Percezioni di corruzione</th>
-          </tr>
-          
-          <tr class="divisore">
-            <td>{{ item[0] }}</td>
-            <td>{{ item[1] }}</td>
-            <td>{{ item[2] }}</td>
-            <td>{{ item[3] }}</td>
-            <td>{{ item[4] }}</td>
-            <td>{{ item[5] }}</td>
-            <td>{{ item[6] }}</td>
-            <td>{{ item[7] }}</td>
-            <td>{{ item[8] }}</td>
-          </tr>
-        </table>
-      
-      
-    </div>  <!-- chiusura di STATS-->
-  </div>  <!-- chiusura di ROW-->
-{% endfor %}
+    <div class="row" onclick="myFunction('{{ item[1] }}')" id="row-{{ item[1] }}"> <!--metti id row-nome paese-->
+      <!--nome del paese nell'argomento della funzione-->
+      <div class="row_sx">
+        <!--<div> -->
+          <div class="bandiera">
+            <img src="../static/images/{{ item[0] }}.jpg" alt="{{ item[0] }}" width="255" height="155">
+            <!--alt per nome paese in assenza immagine-->
+          </div> <!-- chiusura di BANDIERA -->
+          <div class="paese">
+            <p class="testo-medio"><b>{{ item[0] }}</b></p> <!--rank nella classifica-->
+            <a href="/paesi/{{ item[1] }}" class="testo-importante">{{ item[1] }}</a>
+          </div> <!-- chiusura di PAESE -->
+          <span class="freccina"></span> <!-- freccina  -->
+        <!--</div>-->
+      </div> <!-- chiusura di ROW_SX -->
+      <div id="stats-{{ item[1] }}" class="stats-div">
+        <div class="stats-content">
 
-    
-  
+          <table>
+            <tr class="testo-normal">
+              <th>Posizione generale</th>
+              <th>Paese o regione</th>
+              <th>Punteggio</th>
+              <th>PIL pro capite</th>
+              <th>Supporto sociale</th>
+              <th>Aspettativa di vita in salute</th>
+              <th>Libertà di fare scelte di vita</th>
+              <th>Generosità</th>
+              <th>Percezioni di corruzione</th>
+            </tr>
 
+            <tr class="divisore testo-normal">
+              <td>{{ item[0] }}</td>
+              <td>{{ item[1] }}</td>
+              <td>{{ item[2] }}</td>
+              <td>{{ item[3] }}</td>
+              <td>{{ item[4] }}</td>
+              <td>{{ item[5] }}</td>
+              <td>{{ item[6] }}</td>
+              <td>{{ item[7] }}</td>
+              <td>{{ item[8] }}</td>
+            </tr>
+          </table>
 
+        </div> <!--chiusura di TABELLA-->
+      </div> <!-- chiusura di STATS-->
+    </div> <!-- chiusura di ROW-->
+    {% endfor %}
 
 
-  <script>
-function myFunction(id) {                         //funzione dello ziopera
-  var x = document.getElementById("stats-" + id);  //prendi elemento con id stats-item{...}
-  var row = document.getElementById("row-" + id);  //prendi elemento con id row ecc
-  row.classList.toggle("open");                    //aggiungi una classe open al div nascosto
-  
-  if (row.classList.contains("open")) {            //"se row-(...) ha una classe open..."
-    x.style.opacity = "0";
-    x.style.display = "block";                     //..aggiungigli l'attributo display block
-    setTimeout(function() {
-      x.style.opacity = "1";                        // animazione 1 decimo di secondo, imposta l'opacità a 1
-    }, 100);
-  } else {                                         //altrimenti
-    x.style.opacity = "1"
-    setTimeout(function() {
-      x.style.display = "none";                      // animazione 3 decimi, div nascosto
-    }, 300);                                                               
-  }
-} //js entra nel css e cambia attributi
+
+
+
+
+
+    <script>
+      function myFunction(id) {                         //funzione dello ziomegapera
+        var x = document.getElementById("stats-" + id);  //prendi elemento con id stats-item{...}
+        var row = document.getElementById("row-" + id);  //prendi elemento con id row ecc
+        row.classList.toggle("open");                    //aggiungi una classe open al div nascosto
+
+        if (row.classList.contains("open")) {            //"se row-(...) ha una classe open..."
+          x.style.opacity = "0";
+          x.style.display = "block";                     //..aggiungigli l'attributo display block
+          x.style.justifyContent = "center";
+          setTimeout(function () {
+            x.style.opacity = "1";                        // animazione 1 decimo di secondo, imposta l'opacità a 1
+          }, 100);
+        } else {                                         //altrimenti
+          x.style.opacity = "1"
+          setTimeout(function () {
+            x.style.display = "none";                      // animazione 3 decimi, div nascosto
+          }, 100);
+        }
+      } //js entra nel css e cambia attributi
 
     </script>
 

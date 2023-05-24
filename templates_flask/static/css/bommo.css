@@ -24,7 +24,11 @@
 
   
 
-    .bandiera {margin: 10px; border: 1px solid red}
+    .bandiera {
+      margin: 10px; border: 1px solid red;
+      margin-left: 150px;
+    
+    }
 
     .row_sx{display: flex;width: 100%; border: 1px solid red; justify-content: center; align-items: center;}
 
@@ -53,19 +57,24 @@
       border-bottom: 2px solid black;
       transform: rotate(-45deg); /* ruota freccina verso il basso (menu chiuso) */
       transition: transform 0.3s ease-in-out; /* ???? */
+      margin-left: 10px;
+      
     }
     
-    .row.open .freccina {           /* .open quando js gli mete la classe*/
+    .row.open .freccina {           /* .open quando js gli mete la classe */
       transform: rotate(-225deg); /* Ruota la freccina a -225 gradi quando row ha open(menù  aperto) */
     }
 
-    .row.open .stats-div {
+   /* .row.open .stats-div {
+      justify-content: center;
       
-      
-      }
+      }          */
 
  th, td {
   border: 1px solid black;
 }
     
 
+.row::after {justify-content: center; }
+
+.stats-content { display: flex; justify-content: center;align-items: center;}
