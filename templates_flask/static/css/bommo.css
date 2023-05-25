@@ -1,10 +1,11 @@
     /* generico*/
-    body {font-family: 'Inter', sans-serif; font-size: 16px; cursor: url(../images/mano\ del\ gaucho.png), auto;}
+    body {font-family: 'Inter', sans-serif; font-size: 16px;/* cursor: url(../images/mano\ del\ gaucho.png), auto; */}
 
     .testo-grande{font-size: 70px; font-weight: 900;}
     .testo-medio{font-size: 40px;}
     .testo-normal{font-size: 20px;}
     .testo-piccolo{font-size: 14px;}
+    .testo-nome{font-size: 30px;}
     
     
     p { color: #000; font-weight: 300; margin: 5px 0px;}
@@ -18,25 +19,25 @@
         cursor: not-allowed;
     }
 
-    .paese {border: 1px solid red; display: inline-block; justify-content: center; }
+    .paese {display: inline-block; justify-content: center; padding-left: 5%;}
 
-    .grid{ width: 100%; border: 1px solid red;display: block;}
+    .grid{ width: 100%; border: 1px solid rgb(0, 0, 0);display: block;}
 
   
 
     .bandiera {
-      margin: 10px; border: 1px solid red;
-      margin-left: 150px;
-    
+      margin: 10px; 
+      margin-left: 9%;
+
     }
 
-    .row_sx{display: flex;width: 100%; border: 1px solid red; justify-content: center; align-items: center;}
+    .row_sx{display: flex;width: 900px; border: 1px solid black; align-items: center; border-radius: 14px;}
 
     a{text-decoration: none;}
 
     
 
-    .row{display: block;}     /*uno sopra l'altro*/
+    .row{display: block; width: 900px; margin: 0 auto;}     /*uno sopra l'altro*/
 
 
     .stats-div {
@@ -47,17 +48,18 @@
         text-align: center;
         background-color: lightblue;
         transition: opacity 0.3s ease-out; /* ???*/
+        border-radius: 14px;
     }
     
 
     .freccina {
       width: 10px;
       height: 10px;
-      border-left: 2px solid black;
-      border-bottom: 2px solid black;
+      border-left: 3px solid black;
+      border-bottom: 3px solid black;
       transform: rotate(-45deg); /* ruota freccina verso il basso (menu chiuso) */
       transition: transform 0.3s ease-in-out; /* ???? */
-      margin-left: 10px;
+      margin-left: 20px;
       
     }
     
@@ -78,3 +80,6 @@
 .row::after {justify-content: center; }
 
 .stats-content { display: flex; justify-content: center;align-items: center;}
+
+
+.bordo {border-bottom: 1px solid black; width: 100%;display: block;}
