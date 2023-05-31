@@ -21,7 +21,13 @@
 
     .paese {display: inline-block; justify-content: center; padding-left: 5%;}
 
-    .grid{ width: 100%; border: 1px solid rgb(0, 0, 0);display: block;}
+    .grid{ 
+      width: 100%; border: 1px solid rgb(0, 0, 0);display: block; 
+      background:url(../images/sfondo_onu.svg.png); background-attachment: fixed; background-position-x: 50%;
+  
+    }
+    /*.grid img {opacity: 1;}*/
+    .grid img:hover {opacity: 0.7;}
 
   
 
@@ -31,7 +37,7 @@
 
     }
 
-    .row_sx{display: flex;width: 900px; border: 1px solid black; align-items: center; border-radius: 14px;}
+    .row_sx{display: flex;width: 900px; border: 1px solid black; align-items: center; border-radius: 14px; z-index: 100; background-color: rgb(211, 250, 255);}
 
     a{text-decoration: none;}
 

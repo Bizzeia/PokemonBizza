@@ -25,6 +25,8 @@
     <!-- <p>Di seguito il mio (wide)alberogenealogico</p> <img src="../static/images/miopadre.jpg" alt="stominchie" width="800" height="198"/> -->
     <p class="testo-normal">Di seguito la classifica delle nazioni a partire dalla più felice</p>
 
+
+
   </div>
   <div class="grid">
 
@@ -41,7 +43,7 @@
           </div> <!-- chiusura di BANDIERA -->
           <div class="paese">
             <p class="testo-medio"><b>{{ item[0] }}</b></p> <!--rank nella classifica-->
-            <a href="/paesi/{{ item[1] }}" class="testo-nome"><b>{{ item[1] }}</b></a>
+            <a href="https://en.wikipedia.org/wiki/{{ item[1] }}" class="testo-nome" target="_blank"><b>{{ item[1] }}</b></a>
           </div> <!-- chiusura di PAESE -->
           <span class="freccina"></span> <!-- freccina  -->
         <!--</div>-->
